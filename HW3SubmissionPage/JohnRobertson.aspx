@@ -13,9 +13,13 @@
 </head>
 <body>
     <form id="form1" runat="server">
-    <div>
+    <div itemref="http://10.1.11.192:8001">
     
         <asp:Label ID="Label1" runat="server" Font-Size="20pt" Text="John Robertson CSE 445 HW3 TryIt Page 11/8/2014"></asp:Label>
+        <br />
+        <br />
+        Please view most up-to-date version on the
+        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="http://10.1.11.192:8001">IIS Server</asp:HyperLink>
         <br />
     
     </div>
@@ -53,6 +57,7 @@
         <asp:ListBox ID="NewsServiceResultListBox" runat="server" Height="126px" Width="598px"></asp:ListBox>
         <br />
         <br />
+        -------------------------------------------------------------------------------------------<br />
         <span class="auto-style1"><strong>Elective Services</strong></span><br />
         <br />
         <strong>3. Stock Data Point Service</strong><br />
@@ -69,6 +74,7 @@
         Data Points:<br />
         <asp:ListBox ID="DataPointsResultListBox" runat="server" Width="295px"></asp:ListBox>
         <br />
+        -------------------------------------------------------------------------------------------<br />
         <br />
         <strong>4. Stock Chart Service</strong><br />
         Description: Takes a company name and returns a chart of that company&#39;s stock performance.&nbsp; Uses the graphx open source chart api, the stock data points service described above and group member Ryan Prinsen&#39;s stock ticker from company name service.&nbsp; Similar to the DataPoints service above, this service also utilizes a memory cache so that not all requests need to hit the external services.<br />
@@ -89,6 +95,7 @@
         <br />
         <asp:Label ID="StockChartImageUrlLabel" runat="server"></asp:Label>
         <br />
+        -------------------------------------------------------------------------------------------<br />
         <br />
         <strong>5. Stock Description Service</strong><br />
         Description: Takes a company name and returns a description of the company&#39;s stock performance in english.&nbsp; Uses the StockDataPoints Service defined above and Ryan Prinsen&#39;s GetStockTicker service.&nbsp; Again, this sevice implements a cache to drastically improve performance on repeat requests.<br />
