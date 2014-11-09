@@ -27,7 +27,7 @@
 &nbsp;
         <asp:FileUpload ID="FileUpload1" runat="server" />
         <br />
-        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Upload!" />
+        <asp:Button ID="fileUploadButton" runat="server" OnClick="Button1_Click" Text="Upload!" />
         <br />
         <br />
         Remote File URL:<br />

@@ -342,6 +342,16 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\StorageService\HW3SubmissionPage.StorageService.FileUploadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\StorageService\StorageService.disco" />
+    <None Include="Service References\StorageService\configuration91.svcinfo" />
+    <None Include="Service References\StorageService\configuration.svcinfo" />
+    <None Include="Service References\StorageService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -354,6 +364,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReferenceWeather\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StorageService\StorageService.wsdl" />
+    <None Include="Service References\StorageService\StorageService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StorageService\StorageService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StorageService\StorageService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">
@@ -518,6 +538,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\StorageService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -556,6 +581,7 @@
     <WCFMetadataStorage Include="Service References\ServiceReferenceSynonym\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceTwitterService\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceWeather\" />
+    <WCFMetadataStorage Include="Service References\StorageService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

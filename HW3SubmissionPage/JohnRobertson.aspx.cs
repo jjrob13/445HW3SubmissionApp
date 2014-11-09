@@ -14,9 +14,14 @@ namespace HW3SubmissionPage
 
         }
 
+        StorageService.StorageServiceClient storageServiceClient = new StorageService.StorageServiceClient();
         protected void Button1_Click(object sender, EventArgs e)
         {
-
+            //user has selected a file to upload
+            if (FileUpload1.HasFile)
+            {
+                StorageServiceOutputLabel.Text = storageServiceClient.uploadFile(FileUpload1.FileName, FileUpload1.FileContent);
+            }
         }
     }
 }
