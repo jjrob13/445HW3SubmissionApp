@@ -11,6 +11,7 @@ namespace HW3SubmissionPage
 {
     public partial class JohnRobertson : System.Web.UI.Page
     {
+        const string BASE_IIS_SERVER_REMOTE_URL = "http://10.1.11.192:8001";
         protected void Page_Load(object sender, EventArgs e)
         {
 
@@ -26,7 +27,7 @@ namespace HW3SubmissionPage
             }
         }
 
-        string NEWS_SERVICE_REST_API_LINK = "http://10.1.11.192:8001/NewsService/NewsService.svc/search/";
+        string NEWS_SERVICE_REST_API_LINK = BASE_IIS_SERVER_REMOTE_URL + "/NewsService/NewsService.svc/search/";
         protected void NewsServiceSearchButtonClick(object sender, EventArgs e)
         {
             //the textbox is not empty
@@ -96,6 +97,35 @@ namespace HW3SubmissionPage
                 }
             }
         }
+
+        string STOCK_CHART_API_URL = BASE_IIS_SERVER_REMOTE_URL + "/StockChartService/Service1.svc/getStockChart?company=";
+        protected void StockChartEnterButtonClick(object sender, EventArgs e)
+        {
+            //input is not empty
+            if (!StockChartCompanyNameTextBox.Text.Equals(""))
+            {
+                string fullApiCall = STOCK_CHART_API_URL + StockChartCompanyNameTextBox.Text;
+                //call the api
+                try
+                {
+                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(fullApiCall);
+                    WebResponse response = request.GetResponse();
+                    StreamReader responseReader = new StreamReader(response.GetResponseStream());
+
+                    string chartURL = responseReader.ReadToEnd();
+                    chartURL = chartURL.Trim('"');
+
+                    StockChartImage.ImageUrl = chartURL;
+                    StockChartImageUrlLabel.Text = chartURL;
+                }
+                catch (Exception ex)
+                {
+                    string ERROR_MESSAGE = "Error creating chart for company: " + StockChartCompanyNameTextBox.Text + ". Please change company name and try again.";
+                    StockChartImageUrlLabel.Text = ERROR_MESSAGE;
+                }
+            }
+        }
+
 
     }
 }

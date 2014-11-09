@@ -70,8 +70,8 @@
         Output: URL of chart depicting the company&#39;s stock performance<br />
         <br />
         Company Name:<br />
-        <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
-        <asp:Button ID="Button4" runat="server" OnClick="Button1_Click" Text="Enter!" />
+        <asp:TextBox ID="StockChartCompanyNameTextBox" runat="server"></asp:TextBox>
+        <asp:Button ID="StockChartServiceEnterButton" runat="server" OnClick="StockChartEnterButtonClick" Text="Enter!" />
         <br />
         <br />
         StockChart:<br />
@@ -80,7 +80,7 @@
         <br />
         ImageURL:
         <br />
-        <asp:Label ID="Label1" runat="server" Text="StockChartImageUrlLabel"></asp:Label>
+        <asp:Label ID="StockChartImageUrlLabel" runat="server"></asp:Label>
         <br />
         <br />
         5. Stock Description Service<br />

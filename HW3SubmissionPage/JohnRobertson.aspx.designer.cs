@@ -103,22 +103,22 @@ namespace HW3SubmissionPage {
         protected global::System.Web.UI.WebControls.ListBox DataPointsResultListBox;
         
         /// <summary>
-        /// TextBox4 control.
+        /// StockChartCompanyNameTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox StockChartCompanyNameTextBox;
         
         /// <summary>
-        /// Button4 control.
+        /// StockChartServiceEnterButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button4;
+        protected global::System.Web.UI.WebControls.Button StockChartServiceEnterButton;
         
         /// <summary>
         /// StockChartImage control.
@@ -130,13 +130,13 @@ namespace HW3SubmissionPage {
         protected global::System.Web.UI.WebControls.Image StockChartImage;
         
         /// <summary>
-        /// Label1 control.
+        /// StockChartImageUrlLabel control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label1;
+        protected global::System.Web.UI.WebControls.Label StockChartImageUrlLabel;
         
         /// <summary>
         /// TextBox5 control.
