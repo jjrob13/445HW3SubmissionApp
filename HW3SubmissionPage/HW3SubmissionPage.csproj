@@ -203,11 +203,62 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Service References\ServiceReferenceIncidentService\HW3SubmissionPage.ServiceReferenceIncidentService.CompositeType.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReferenceIncidentService\HW3SubmissionPage.ServiceReferenceIncidentService.TrafficList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReferenceIncidentService\service.wsdl" />
+    <None Include="Service References\ServiceReferenceIncidentService\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceIncidentService\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceIncidentService\TrafficService.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ServiceReferenceNaturalHazards\Service1.wsdl" />
     <None Include="Service References\ServiceReferenceNaturalHazards\Service1.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReferenceNaturalHazards\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceNearByPlaces\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferenceNearByPlaces\configuration.svcinfo" />
+    <Content Include="Service References\ServiceReferenceNearByPlaces\HW3SubmissionPage.ServiceReferenceNearByPlaces.PlacesList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReferenceNearByPlaces\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\ServiceReferencePlacesReviewService\HW3SubmissionPage.ServiceReferencePlacesReviewService.HotelDetails.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\ServiceReferencePlacesReviewService\HW3SubmissionPage.ServiceReferencePlacesReviewService.HotelList.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReferenceNearByPlaces\NearByPlaces.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceNearByPlaces\service.wsdl" />
+    <None Include="Service References\ServiceReferenceNearByPlaces\service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceNearByPlaces\service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferencePlacesReviewService\Service1.wsdl" />
+    <None Include="Service References\ServiceReferencePlacesReviewService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferencePlacesReviewService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferencePlacesReviewService\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReferenceStockTicker\Service1.wsdl" />
@@ -216,6 +267,19 @@
     </None>
     <None Include="Service References\ServiceReferenceStockTicker\Service11.xsd">
       <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceIncidentService\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferenceIncidentService\configuration.svcinfo" />
+    <None Include="Service References\ServiceReferenceIncidentService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReferencePlacesReviewService\Service1.disco" />
+    <None Include="Service References\ServiceReferencePlacesReviewService\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferencePlacesReviewService\configuration.svcinfo" />
+    <None Include="Service References\ServiceReferencePlacesReviewService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
     <Content Include="Service References\ServiceReferenceSynonym\HW3SubmissionPage.ServiceReferenceSynonym.TextMessage.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -228,6 +292,19 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReferenceSynonym\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Service References\ServiceReferenceTwitterService\HW3SubmissionPage.ServiceReferenceTwitterService.TwitterModel.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\ServiceReferenceTwitterService\Service1.wsdl" />
+    <None Include="Service References\ServiceReferenceTwitterService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceTwitterService\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\ServiceReferenceTwitterService\Service12.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReferenceWeather\Service1.disco" />
@@ -255,6 +332,13 @@
     <None Include="Service References\ServiceReferenceSynonym\configuration91.svcinfo" />
     <None Include="Service References\ServiceReferenceSynonym\configuration.svcinfo" />
     <None Include="Service References\ServiceReferenceSynonym\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <None Include="Service References\ServiceReferenceTwitterService\Service1.disco" />
+    <None Include="Service References\ServiceReferenceTwitterService\configuration91.svcinfo" />
+    <None Include="Service References\ServiceReferenceTwitterService\configuration.svcinfo" />
+    <None Include="Service References\ServiceReferenceTwitterService\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
@@ -394,7 +478,22 @@
     <Compile Include="RyanPrinsen.aspx.designer.cs">
       <DependentUpon>RyanPrinsen.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Service References\ServiceReferenceIncidentService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReferenceNaturalHazards\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReferenceNearByPlaces\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReferencePlacesReviewService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -405,6 +504,11 @@
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
     <Compile Include="Service References\ServiceReferenceSynonym\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\ServiceReferenceTwitterService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -444,9 +548,13 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\ServiceReferenceIncidentService\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceNaturalHazards\" />
+    <WCFMetadataStorage Include="Service References\ServiceReferenceNearByPlaces\" />
+    <WCFMetadataStorage Include="Service References\ServiceReferencePlacesReviewService\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceStockTicker\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceSynonym\" />
+    <WCFMetadataStorage Include="Service References\ServiceReferenceTwitterService\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceWeather\" />
   </ItemGroup>
   <PropertyGroup>
