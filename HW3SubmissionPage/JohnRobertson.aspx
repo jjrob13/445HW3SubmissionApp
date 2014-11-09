@@ -19,7 +19,8 @@
         <span class="auto-style1"><strong>Required Services</strong></span><br />
         <br />
         <strong>1. Storage Service</strong><br />
-        Description: Uploads local file to remote server location<br />
+        Description: Uploads local file to remote server location.&nbsp; No external APIs used.<br />
+        <br />
         Input: File location on local machine<br />
         Output: URL of uploaded file on server.<br />
         <br />
@@ -35,7 +36,8 @@
         <br />
         -------------------------------------------------------------------------------------------<br />
         <strong>2. News Service</strong><br />
-        Description: Takes a keyword or phrase and returns a list of urls that contain news on that subject<br />
+        Description: A RESTFul service that takes a keyword or phrase and returns a list of urls that contain news on that subject.&nbsp; Calls the reddit.com/r/news api and returns the first 20 results.<br />
+        <br />
         Input: Keyword or phrase<br />
         Output: List of urls containing news on that topic<br />
         <br />
@@ -48,10 +50,11 @@
         <asp:ListBox ID="NewsServiceResultListBox" runat="server" Height="126px" Width="598px"></asp:ListBox>
         <br />
         <br />
-        Elective Services<br />
+        <span class="auto-style1"><strong>Elective Services</strong></span><br />
         <br />
-        3. Stock Data Point Service<br />
-        Description: Takes a stock ticker and returns stock data points for that ticker<br />
+        <strong>3. Stock Data Point Service</strong><br />
+        Description: Takes a stock ticker and returns stock data points for that ticker.&nbsp; Uses the quandl.com stock data api and parses the response (which is a .csv file).&nbsp; Also utilizes a local cache so that not all request need to call the external api, improving performance.<br />
+        <br />
         Input: Stock Ticker (eg. TSLA)<br />
         Output: List of stock prices with their corresponding date<br />
         <br />
@@ -64,8 +67,9 @@
         <asp:ListBox ID="DataPointsResultListBox" runat="server" Width="295px"></asp:ListBox>
         <br />
         <br />
-        4. Stock Chart Service<br />
-        Description: Takes a company name and returns a chart of that company&#39;s stock performance<br />
+        <strong>4. Stock Chart Service</strong><br />
+        Description: Takes a company name and returns a chart of that company&#39;s stock performance.&nbsp; Uses the graphx open source chart api, the stock data points service described above and group member Ryan Prinsen&#39;s stock ticker from company name service.&nbsp; Similar to the DataPoints service above, this service also utilizes a memory cache so that not all requests need to hit the external services.<br />
+        <br />
         Input: Company name (eg. Tesla, Microsoft, Google)<br />
         Output: URL of chart depicting the company&#39;s stock performance<br />
         <br />
@@ -83,18 +87,19 @@
         <asp:Label ID="StockChartImageUrlLabel" runat="server"></asp:Label>
         <br />
         <br />
-        5. Stock Description Service<br />
-        Description: Takes a company name and returns a description of the company&#39;s stock performance in english.<br />
+        <strong>5. Stock Description Service</strong><br />
+        Description: Takes a company name and returns a description of the company&#39;s stock performance in english.&nbsp; Uses the StockDataPoints Service defined above and Ryan Prinsen&#39;s GetStockTicker service.&nbsp; Again, this sevice implements a cache to drastically improve performance on repeat requests.<br />
+        <br />
         Input: Company name (eg. Tesla, Microsoft, Google)<br />
         Output: A description of how the company&#39;s stock has been performing.<br />
         <br />
         Company Name:<br />
-        <asp:TextBox ID="TextBox5" runat="server"></asp:TextBox>
-        <asp:Button ID="Button5" runat="server" OnClick="Button1_Click" Text="Enter!" />
+        <asp:TextBox ID="StockDescriptionCompanyNameTextBox" runat="server"></asp:TextBox>
+        <asp:Button ID="StockDescriptionEnterButton" runat="server" OnClick="StockDescriptionEnterButtonClick" Text="Enter!" />
         <br />
         <br />
         Stock Performance Description:<br />
-        <asp:Label ID="Label2" runat="server" Text="StockPerformanceLabel"></asp:Label>
+        <asp:Label ID="StockPerformanceDescriptionLabel" runat="server"></asp:Label>
     </form>
 </body>
 </html>

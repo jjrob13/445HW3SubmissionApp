@@ -104,6 +104,9 @@ namespace HW3SubmissionPage
             //input is not empty
             if (!StockChartCompanyNameTextBox.Text.Equals(""))
             {
+                //clear previous image and url
+                StockChartImageUrlLabel.Text = "";
+
                 string fullApiCall = STOCK_CHART_API_URL + StockChartCompanyNameTextBox.Text;
                 //call the api
                 try
@@ -122,6 +125,41 @@ namespace HW3SubmissionPage
                 {
                     string ERROR_MESSAGE = "Error creating chart for company: " + StockChartCompanyNameTextBox.Text + ". Please change company name and try again.";
                     StockChartImageUrlLabel.Text = ERROR_MESSAGE;
+                }
+            }
+        }
+
+        //restful api 
+        string STOCK_DESCRIPTION_REST_API = BASE_IIS_SERVER_REMOTE_URL + "/StockDescriptionService/Service1.svc/description?company=";
+        protected void StockDescriptionEnterButtonClick(object sender, EventArgs e)
+        {
+            //check for non-empty input
+            if (!StockDescriptionCompanyNameTextBox.Text.Equals(""))
+            {
+                //clear previous stock description
+                StockPerformanceDescriptionLabel.Text = "";
+
+                string fullStockDescriptionApiUrl = STOCK_DESCRIPTION_REST_API + StockDescriptionCompanyNameTextBox.Text;
+
+                //call api
+                try
+                {
+                    HttpWebRequest request = (HttpWebRequest)WebRequest.Create(fullStockDescriptionApiUrl);
+                    WebResponse response = request.GetResponse();
+
+                    StreamReader responseReader = new StreamReader(response.GetResponseStream());
+
+                    string stockDescription = responseReader.ReadToEnd();
+                    stockDescription = stockDescription.Trim('"');
+
+                    StockPerformanceDescriptionLabel.Text = stockDescription;
+
+                }
+                catch (Exception ex)
+                {
+                    //something went wrong
+                    string ERROR_MESSAGE = "Unable to get stock performance description for " + StockDescriptionCompanyNameTextBox.Text + " please try again with a different input";
+                    StockPerformanceDescriptionLabel.Text = ERROR_MESSAGE;
                 }
             }
         }
