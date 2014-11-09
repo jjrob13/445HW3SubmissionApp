@@ -17,6 +17,7 @@
         <pre style="border: 1px solid rgb(240, 240, 224); padding: 5px; margin-top: -5px; font-size: 1.2em; font-family: 'Courier New'; color: rgb(0, 0, 0); font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: start; text-indent: 0px; text-transform: none; widows: auto; word-spacing: 0px; -webkit-text-stroke-width: 0px; background-color: rgb(229, 229, 204);">http://10.1.11.192:8001/NaturalHazardsService/Service1.svc?wsdl</pre>
         <p class="lead">Enter both latitude and longitude to get the number of 1.0+ magnitude earthquakes nearby the location within the last month.</p>
         <p class="lead">hint: use locations that frequent earthquakes, i.e. West Coast United States, Japan, etc.</p>
+        <p class="lead">warning: latitude must be between -90 to 90, longitude -180 to 180</p>
         <p>
             <asp:TextBox ID="NaturalHazardsTextBox1" runat="server" ForeColor="#FF9900" Width="100px" OnTextChanged="TextBox3_TextChanged">latitude</asp:TextBox>
             <asp:TextBox ID="NaturalHazardsTextBox2" runat="server" ForeColor="#FF9900" Width="100px" OnTextChanged="TextBox4_TextChanged">longitude</asp:TextBox>
