@@ -13,5 +13,10 @@ namespace HW3SubmissionPage
         {
 
         }
+
+        protected void Button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
