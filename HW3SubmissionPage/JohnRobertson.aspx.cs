@@ -6,7 +6,7 @@ using System.Net;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-
+using HW3SubmissionPage.DataPointsService;
 namespace HW3SubmissionPage
 {
     public partial class JohnRobertson : System.Web.UI.Page
@@ -57,5 +57,45 @@ namespace HW3SubmissionPage
                 }
             }
         }
+
+
+        StockDataPointsServiceClient dataPointsClient = new StockDataPointsServiceClient();
+        protected void StockDataPointsEnterButtonClick(object sender, EventArgs e)
+        {
+            //make sure the text box is not empty
+            if (!StockDataPointsStockTickerTextBox.Text.Equals(""))
+            {
+                try
+                {
+                    //clear any previous items
+                    DataPointsResultListBox.Items.Clear();
+
+                    string stockTicker = StockDataPointsStockTickerTextBox.Text;
+
+                    StockDataPoints dataPoints = dataPointsClient.GetStockDataPoints(stockTicker);
+
+                    //something went wrong with the api call and it returned null
+                    if (dataPoints == null || dataPoints.DataPoints == null)
+                        return;
+
+                    for (int i = 0; i < dataPoints.DataPoints.Length; i++)
+                    {
+                        if (dataPoints.DataPoints[i] != null)
+                        {
+                            ListItem item = new ListItem();
+                            item.Text = dataPoints.DataPoints[i].date.ToShortDateString() + " --- $" + dataPoints.DataPoints[i].price;
+                            DataPointsResultListBox.Items.Add(item);
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    string ERROR_MESSAGE = "Unable To Retrieve Data Points for " + StockDataPointsStockTickerTextBox.Text;
+                    DataPointsResultListBox.Items.Clear();
+                    DataPointsResultListBox.Items.Add(ERROR_MESSAGE);
+                }
+            }
+        }
+
     }
 }

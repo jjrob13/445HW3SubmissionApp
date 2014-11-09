@@ -203,12 +203,32 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Service References\DataPointsService\HW3SubmissionPage.DataPointsService.StockDataPoints.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\DataPointsService\StockDataPointsService.disco" />
+    <None Include="Service References\DataPointsService\configuration91.svcinfo" />
+    <None Include="Service References\DataPointsService\configuration.svcinfo" />
+    <None Include="Service References\DataPointsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\ServiceReferenceIncidentService\HW3SubmissionPage.ServiceReferenceIncidentService.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\ServiceReferenceIncidentService\HW3SubmissionPage.ServiceReferenceIncidentService.TrafficList.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\DataPointsService\StockDataPointsService.wsdl" />
+    <None Include="Service References\DataPointsService\StockDataPointsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataPointsService\StockDataPointsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataPointsService\StockDataPointsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ServiceReferenceIncidentService\service.wsdl" />
     <None Include="Service References\ServiceReferenceIncidentService\service.xsd">
       <SubType>Designer</SubType>
@@ -498,6 +518,11 @@
     <Compile Include="RyanPrinsen.aspx.designer.cs">
       <DependentUpon>RyanPrinsen.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Service References\DataPointsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReferenceIncidentService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -573,6 +598,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DataPointsService\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceIncidentService\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceNaturalHazards\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceNearByPlaces\" />

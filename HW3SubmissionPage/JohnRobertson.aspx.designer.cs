@@ -76,31 +76,31 @@ namespace HW3SubmissionPage {
         protected global::System.Web.UI.WebControls.ListBox NewsServiceResultListBox;
         
         /// <summary>
-        /// TextBox3 control.
+        /// StockDataPointsStockTickerTextBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox3;
+        protected global::System.Web.UI.WebControls.TextBox StockDataPointsStockTickerTextBox;
         
         /// <summary>
-        /// Button3 control.
+        /// StockDataPointsEnterButton control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Button3;
+        protected global::System.Web.UI.WebControls.Button StockDataPointsEnterButton;
         
         /// <summary>
-        /// ListBox2 control.
+        /// DataPointsResultListBox control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ListBox ListBox2;
+        protected global::System.Web.UI.WebControls.ListBox DataPointsResultListBox;
         
         /// <summary>
         /// TextBox4 control.

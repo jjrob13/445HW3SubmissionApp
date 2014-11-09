@@ -56,12 +56,12 @@
         Output: List of stock prices with their corresponding date<br />
         <br />
         Stock Ticker:<br />
-        <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
-        <asp:Button ID="Button3" runat="server" OnClick="Button1_Click" Text="Enter!" />
+        <asp:TextBox ID="StockDataPointsStockTickerTextBox" runat="server"></asp:TextBox>
+        <asp:Button ID="StockDataPointsEnterButton" runat="server" OnClick="StockDataPointsEnterButtonClick" Text="Enter!" />
         <br />
         <br />
         Data Points:<br />
-        <asp:ListBox ID="ListBox2" runat="server" Width="295px"></asp:ListBox>
+        <asp:ListBox ID="DataPointsResultListBox" runat="server" Width="295px"></asp:ListBox>
         <br />
         <br />
         4. Stock Chart Service<br />
