@@ -40,12 +40,12 @@
         Output: List of urls containing news on that topic<br />
         <br />
         Keyword:<br />
-&nbsp;<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-        <asp:Button ID="Button2" runat="server" OnClick="Button1_Click" Text="Search!" />
+&nbsp;<asp:TextBox ID="NewServiceKeywordTextBox" runat="server"></asp:TextBox>
+        <asp:Button ID="NewsServiceSearchButton" runat="server" OnClick="NewsServiceSearchButtonClick" Text="Search!" />
         <br />
         <br />
         News URLs:<br />
-        <asp:ListBox ID="ListBox1" runat="server" Width="295px"></asp:ListBox>
+        <asp:ListBox ID="NewsServiceResultListBox" runat="server" Height="126px" Width="598px"></asp:ListBox>
         <br />
         <br />
         Elective Services<br />

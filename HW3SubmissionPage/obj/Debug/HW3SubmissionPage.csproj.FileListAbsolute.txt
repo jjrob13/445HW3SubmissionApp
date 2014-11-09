@@ -148,6 +148,5 @@ C:\Users\John\Desktop\CSE 445\HW3SubmissionPage\HW3SubmissionPage\bin\Microsoft.
 C:\Users\John\Desktop\CSE 445\HW3SubmissionPage\HW3SubmissionPage\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\John\Desktop\CSE 445\HW3SubmissionPage\HW3SubmissionPage\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\John\Desktop\CSE 445\HW3SubmissionPage\HW3SubmissionPage\bin\Microsoft.Owin.Security.OAuth.xml
-C:\Users\John\Desktop\CSE 445\HW3SubmissionPage\HW3SubmissionPage\obj\Debug\HW3SubmissionPage.csprojResolveAssemblyReference.cache
 C:\Users\John\Desktop\CSE 445\HW3SubmissionPage\HW3SubmissionPage\obj\Debug\HW3SubmissionPage.dll
 C:\Users\John\Desktop\CSE 445\HW3SubmissionPage\HW3SubmissionPage\obj\Debug\HW3SubmissionPage.pdb
