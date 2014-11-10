@@ -8,7 +8,9 @@ using HW3SubmissionPage.ServiceReferenceWeather;
 using HW3SubmissionPage.ServiceReferenceSynonym;
 using HW3SubmissionPage.ServiceReferenceStockTicker;
 using HW3SubmissionPage.ServiceReferenceNaturalHazards;
-
+using System.IO;
+using System.Collections.Generic;
+using System.Net;
 
 namespace HW3SubmissionPage
 {
@@ -59,8 +61,21 @@ namespace HW3SubmissionPage
         {
             try
             {
-                ServiceReferenceSynonym.Service1Client myClient = new ServiceReferenceSynonym.Service1Client();
-                SynonymLabel.Text = Convert.ToString(myClient.getSynonyms(SynonymTextBox1.Text, SynonymTextBox2.Text));
+                string url = "http://10.1.11.192:8001/SynonymWebService/Service1.svc/getSynonyms/";
+                string urlkeyword = Convert.ToString(SynonymTextBox1.Text);
+                string urltype = Convert.ToString(SynonymTextBox2.Text);
+                string finalurl = url + urlkeyword + "/" + urltype;
+                HttpWebRequest request = (HttpWebRequest)WebRequest.Create(finalurl);
+                WebResponse response = request.GetResponse();
+                StreamReader responseStreamReader = new StreamReader(response.GetResponseStream());
+
+                string urls = responseStreamReader.ReadToEnd();
+                string[] urlList = urls.Split(new char[] { ':' });
+                string result = urlList[1].Trim();
+                result = result.Trim(new char[] { '}', '"' });
+                result = result.Trim();
+                //ServiceReferenceSynonym.Service1Client myClient = new ServiceReferenceSynonym.Service1Client();
+                SynonymLabel.Text = result;
             }
             catch (Exception ex)
             {

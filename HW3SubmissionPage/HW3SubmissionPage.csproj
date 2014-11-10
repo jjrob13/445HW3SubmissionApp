@@ -169,6 +169,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.ttf" />
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="Account\Web.config" />
+    <None Include="Properties\PublishProfiles\445.pubxml" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="RyanPrinsen.aspx" />
     <Content Include="Scripts\bootstrap.js" />
@@ -203,12 +204,32 @@
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="Service References\DataPointsService\HW3SubmissionPage.DataPointsService.StockDataPoints.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\DataPointsService\StockDataPointsService.disco" />
+    <None Include="Service References\DataPointsService\configuration91.svcinfo" />
+    <None Include="Service References\DataPointsService\configuration.svcinfo" />
+    <None Include="Service References\DataPointsService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Service References\ServiceReferenceIncidentService\HW3SubmissionPage.ServiceReferenceIncidentService.CompositeType.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
     <Content Include="Service References\ServiceReferenceIncidentService\HW3SubmissionPage.ServiceReferenceIncidentService.TrafficList.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Content>
+    <None Include="Service References\DataPointsService\StockDataPointsService.wsdl" />
+    <None Include="Service References\DataPointsService\StockDataPointsService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataPointsService\StockDataPointsService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\DataPointsService\StockDataPointsService2.xsd">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="Service References\ServiceReferenceIncidentService\service.wsdl" />
     <None Include="Service References\ServiceReferenceIncidentService\service.xsd">
       <SubType>Designer</SubType>
@@ -342,6 +363,16 @@
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>
+    <Content Include="Service References\StorageService\HW3SubmissionPage.StorageService.FileUploadResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\StorageService\StorageService.disco" />
+    <None Include="Service References\StorageService\configuration91.svcinfo" />
+    <None Include="Service References\StorageService\configuration.svcinfo" />
+    <None Include="Service References\StorageService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -354,6 +385,16 @@
       <SubType>Designer</SubType>
     </None>
     <None Include="Service References\ServiceReferenceWeather\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StorageService\StorageService.wsdl" />
+    <None Include="Service References\StorageService\StorageService.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StorageService\StorageService1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\StorageService\StorageService2.xsd">
       <SubType>Designer</SubType>
     </None>
     <None Include="Web.Debug.config">
@@ -478,6 +519,11 @@
     <Compile Include="RyanPrinsen.aspx.designer.cs">
       <DependentUpon>RyanPrinsen.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Service References\DataPointsService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Service References\ServiceReferenceIncidentService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -518,6 +564,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
     </Compile>
+    <Compile Include="Service References\StorageService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -548,6 +599,7 @@
     <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <ItemGroup>
+    <WCFMetadataStorage Include="Service References\DataPointsService\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceIncidentService\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceNaturalHazards\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceNearByPlaces\" />
@@ -556,6 +608,7 @@
     <WCFMetadataStorage Include="Service References\ServiceReferenceSynonym\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceTwitterService\" />
     <WCFMetadataStorage Include="Service References\ServiceReferenceWeather\" />
+    <WCFMetadataStorage Include="Service References\StorageService\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
